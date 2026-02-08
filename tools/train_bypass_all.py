@@ -689,18 +689,6 @@ def vos_separate_inference_per_object(
 
 def main():
     parser = argparse.ArgumentParser()
-    # parser.add_argument(
-    #     "--sam2_cfg",
-    #     type=str,
-    #     default="configs/sam2.1/sam2.1_hiera_b+.yaml",
-    #     help="SAM 2 model configuration file",
-    # )
-    # parser.add_argument(
-    #     "--sam2_checkpoint",
-    #     type=str,
-    #     default="./checkpoints/sam2.1_hiera_base_plus.pt",
-    #     help="path to the SAM 2 model checkpoint",
-    # )
     parser.add_argument(
         "--sam2_model",
         type=str,
@@ -1072,9 +1060,6 @@ def main():
         st = time.time()
         for n_video, video_name in enumerate(video_names):
             print(f"\n{n_video + 1}/{len(video_names)} - running on {video_name}")
-            # if n_video == 0:
-            #     continue
-            # if n_video % 10 != 0 or n_video < 130:
             if n_video % 4 != 1 or n_video>161:
                 continue
             if not args.track_object_appearing_later_in_video:

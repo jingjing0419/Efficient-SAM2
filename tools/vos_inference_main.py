@@ -1075,13 +1075,8 @@ def main():
             args.win_sel_layer=[9]
             args.fpn_feat_layer=None
             args.scale_layer=None
-        # args.selected_layers = [i for i in range(9,44)]
-        # args.win_sel_layer=9
         args.final_global_layer=43
         args.inner_channel=576
-        # args.bypass_ckpt = './bypass/ckpt/bypass_20250705_052542_L_s16_T30_D5_EP3.pth'
-        # args.bypass_ckpt = './bypass/ckpt/bypass_20250812_120109_L_s16_Tr83_D5_EP5_epoch4.pth'
-        # args.bypass_ckpt = './bypass/ckpt/bypass_20250815_165826_L_EP_9_Tr160_D5_EP10_epoch9.pth'
         
     args.num_frame_to_prune = args.num_frame_to_prune if args.Mem_Frame_Prune else 0
     
